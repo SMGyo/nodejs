@@ -21,5 +21,8 @@ function divide(x,y){
 
 module.exports = {
     add, //"add" : add
+    minus,
+    multi,
+    divide,
     "multi" : multi
 };
