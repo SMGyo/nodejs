@@ -10,3 +10,5 @@ const logger = new Console({ stdout : logOutput, stderr : errOutput});
 let count = 5;
 logger.log('count : %d', count);
 logger.error(`count : ${++count}`);
+
+
