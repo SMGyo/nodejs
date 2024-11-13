@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"name": "nodejs",
+			"path": "../nodejs"
+		}
+	],
+	"settings": {}
+}
