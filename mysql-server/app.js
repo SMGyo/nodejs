@@ -1,7 +1,10 @@
 // app.js
+require('dotenv').config({ path : './database/mysql.env' })
+console.log(process.env);
+
 const express = require('express');
 const app = express();
-const mysql = require('./mapper.js');
+const mysql = require('./database/mapper.js');
 
 // content-type : application/json
 app.use(express.json());//미들웨어 등록
@@ -43,8 +46,12 @@ app.post('/customers', async (req,res)=>{
 }
 */
 // 수정
-app.put('/customers/:id',(req,res)=>{
-    
+app.put('/customers/:id',async (req,res)=>{
+    let newObj = req.body; // 수정할 내용
+    let selected = req.params.id; //단일값 1 2 3 4 5 6 7 8 9
+    console.log(newObj);
+    let info = await mysql.query('customerUpdate' , [newObj,selected]);
+    res.send(info);
 });
 // 삭제
 app.delete('/customers/:id',async(req,res)=>{
