@@ -27,8 +27,10 @@ const customerInsert =
 // 수정
 const customerUpdate = 
 `UPDATE customers
- SET ?  //if태그가 없음 
- WHERE id = ?`; //id에는 자릿값이 들어간다 
+ SET ?  
+ WHERE id = ?`; 
+ //if태그가 없음 
+ //id에는 자릿값이 들어간다 
  //[ { 'name' = 'Hong', 'phone' = '010-1234-1234' }, 1 ]
 
 // 삭제
